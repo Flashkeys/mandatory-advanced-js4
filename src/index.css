@@ -12,3 +12,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+#root,body,html {
+  height: 100%;
+}
+body {
+  background-color: #303030;
+}
+h1 {
+  color: orangered;
+}
+.App {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board {
+  display: flex;
+  width: 800px;
+  flex-wrap: wrap;
+  background: #232323;
+  }
+
+  .board-item {
+    width: calc(800px / 7 - 8px);
+    height: calc(800px / 7 - 8px);
+    background: white;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin: 4px;
+    cursor: pointer;
+  }
+  .board-item[data-player = 'playerOne'] {
+    background: red;
+  }
+
+  .board-item[data-player = 'playerTwo'] {
+    background: yellow;
+  }
+  .container {
+    text-align: center;
+  }
